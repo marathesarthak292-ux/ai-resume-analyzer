@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- HEADER -->
+        <section class="hero">
+
+            <div class="logo">
+                🤖
+            </div>
+
+            <h1>AI Resume Analyzer</h1>
+
+            <p class="tagline">
+                AI-Powered Resume & Job Matching System
+            </p>
+
+        </section>
+
+
+        <!-- CREATED BY -->
+        <section class="team-card">
+
+            <h3>Created By</h3>
+
+            <div class="team-list">
+                <span>Sarthak Marathe</span>
+                <span>Chintan Gujar</span>
+                <span>Chetan Chaudhari</span>
+                <span>Yash Pawar</span>
+            </div>
+
+        </section>
+
+
+        <!-- MAIN CARD -->
+        <section class="analyzer-card">
+
+            <div class="section-title">
+
+                <h2>Analyze Your Resume</h2>
+
+                <p>
+                    Upload your resume and compare it with a job description.
+                </p>
+
+            </div>
+
+
+            <form id="resumeForm">
+
+                <!-- RESUME UPLOAD -->
+                <div class="input-group">
+
+                    <label for="resume">
+                        📄 Resume
+                    </label>
+
+                    <div class="upload-box">
+
+                        <div class="upload-icon">
+                            📁
+                        </div>
+
+                        <h3>Upload your resume</h3>
+
+                        <p>
+                            PDF files only
+                        </p>
+
+                        <input
+                            type="file"
+                            id="resume"
+                            name="resume"
+                            accept=".pdf"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- JOB DESCRIPTION -->
+                <div class="input-group">
+
+                    <label for="job_description">
+                        💼 Job Description
+                    </label>
+
+                    <textarea
+                        id="job_description"
+                        name="job_description"
+                        placeholder="Paste the job description here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <button type="submit" class="analyze-btn">
+
+                    <span>🚀</span>
+
+                    Analyze Resume
+
+                </button>
+
+            </form>
+
+
+            <!-- LOADING -->
+            <div id="loading">
+
+                <div class="loader"></div>
+
+                <p>🤖 AI is analyzing your resume...</p>
+
+                <small>
+                    Please wait while we compare your skills with the job.
+                </small>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div id="result"></div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>
+                © 2026 AI Resume Analyzer
+            </p>
+
+            <p>
+                Built with Python • Flask • Gemini AI
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
